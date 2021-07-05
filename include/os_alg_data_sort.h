@@ -3,12 +3,12 @@
  * @author: xxx
  * @brief: xxx
  * @version: 1.0.0
- * @LastEditTime: 2021-07-05 09:30:30
+ * @LastEditTime: 2021-07-05 23:14:25
  * @attention: Do not edit
  *************************************************************************/
 
-#ifndef __OS_ALG_SORT_H__
-#define __OS_ALG_SORT_H__
+#ifndef __OS_ALG_DATA_SORT_H__
+#define __OS_ALG_DATA_SORT_H__
 
 #include <stdint.h>
 

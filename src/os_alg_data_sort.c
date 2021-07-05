@@ -3,14 +3,14 @@
  * @author: xxx
  * @brief: 冒泡排序的实现
  * @version: 1.0.0
- * @LastEditTime: 2021-07-05 09:07:25
+ * @LastEditTime: 2021-07-05 23:15:37
  * @attention: Do not edit
  *************************************************************************/
 
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
-#include "os_alg_sort.h"
+#include "os_alg_data_sort.h"
 
 #define SORT_DEBUG_ENABLED      1
 
