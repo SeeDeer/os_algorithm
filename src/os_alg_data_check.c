@@ -3,7 +3,7 @@
  * @author: xxx
  * @brief: xxx
  * @version: 1.0.0
- * @LastEditTime: 2021-07-05 23:37:06
+ * @LastEditTime: 2021-08-25 22:23:21
  * @attention: Do not edit
  *************************************************************************/
 #include <stdlib.h>
@@ -27,7 +27,7 @@ uint16_t os_alg_data_check_crc16(uint8_t *data,uint32_t size,const uint16_t crc_
     while (size--){
         byte = *(data++);
         if (ref_flag)
-            invert_uint8(&byte,&byte);
+            __invert_uint8(&byte,&byte);
         crc_reg ^= byte << 8;
         for ( j = 0; j < 8; j++){
             tmp = crc_reg & 0x8000;
@@ -38,7 +38,7 @@ uint16_t os_alg_data_check_crc16(uint8_t *data,uint32_t size,const uint16_t crc_
     }
     
     if (ref_flag)
-        invert_uint16(&crc_reg,&crc_reg);
+        __invert_uint16(&crc_reg,&crc_reg);
     
     // 这里XOROUT数值固定为0x0000
     return crc_reg;  // 等价于 return (crc_reg ^ 0X0000);
@@ -65,4 +65,3 @@ static void __invert_uint16(uint16_t *dstBuf, uint16_t *srcBuf)
     }
     *dstBuf = tmp;
 }
-​
